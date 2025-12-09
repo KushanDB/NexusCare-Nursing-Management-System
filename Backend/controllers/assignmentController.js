@@ -1,7 +1,7 @@
 import Assignment from '../models/Assignment.js';
 
 // Get all assignments
-const getAssignments = async (req, res) => {
+export const getAssignments = async (req, res) => {
   try {
     const assignments = await Assignment.find()
       .populate('nurse', 'name specialization')
@@ -14,7 +14,7 @@ const getAssignments = async (req, res) => {
 };
 
 // Create assignment
-const createAssignment = async (req, res) => {
+export const createAssignment = async (req, res) => {
   try {
     const assignment = await Assignment.create({
       ...req.body,
@@ -30,7 +30,7 @@ const createAssignment = async (req, res) => {
 };
 
 // Update assignment
-const updateAssignment = async (req, res) => {
+export const updateAssignment = async (req, res) => {
   try {
     const assignment = await Assignment.findByIdAndUpdate(
       req.params.id,
@@ -47,7 +47,7 @@ const updateAssignment = async (req, res) => {
 };
 
 // Delete assignment
-const deleteAssignment = async (req, res) => {
+export const deleteAssignment = async (req, res) => {
   try {
     const assignment = await Assignment.findByIdAndDelete(req.params.id);
     if (!assignment) {
@@ -58,5 +58,3 @@ const deleteAssignment = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
-
-export { getAssignments, createAssignment, updateAssignment, deleteAssignment };

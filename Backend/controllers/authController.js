@@ -9,7 +9,7 @@ const generateToken = (id) => {
 };
 
 // Register user
-const register = async (req, res) => {
+export const register = async (req, res) => {
   try {
     const { name, email, password, role } = req.body;
 
@@ -42,7 +42,7 @@ const register = async (req, res) => {
 };
 
 // Login user
-const login = async (req, res) => {
+export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
 
@@ -66,8 +66,6 @@ const login = async (req, res) => {
 };
 
 // Get current user
-const getMe = async (req, res) => {
+export const getMe = async (req, res) => {
   res.json(req.user);
 };
-
-export { register, login, getMe };

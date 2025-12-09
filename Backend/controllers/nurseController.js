@@ -1,7 +1,7 @@
 import Nurse from '../models/Nurse.js';
 
 // Get all nurses
-const getNurses = async (req, res) => {
+export const getNurses = async (req, res) => {
   try {
     const nurses = await Nurse.find().populate('createdBy', 'name email');
     res.json(nurses);
@@ -11,7 +11,7 @@ const getNurses = async (req, res) => {
 };
 
 // Get single nurse
-const getNurse = async (req, res) => {
+export const getNurse = async (req, res) => {
   try {
     const nurse = await Nurse.findById(req.params.id);
     if (!nurse) {
@@ -24,7 +24,7 @@ const getNurse = async (req, res) => {
 };
 
 // Create nurse
-const createNurse = async (req, res) => {
+export const createNurse = async (req, res) => {
   try {
     const nurse = await Nurse.create({
       ...req.body,
@@ -37,7 +37,7 @@ const createNurse = async (req, res) => {
 };
 
 // Update nurse
-const updateNurse = async (req, res) => {
+export const updateNurse = async (req, res) => {
   try {
     const nurse = await Nurse.findByIdAndUpdate(
       req.params.id,
@@ -54,7 +54,7 @@ const updateNurse = async (req, res) => {
 };
 
 // Delete nurse
-const deleteNurse = async (req, res) => {
+export const deleteNurse = async (req, res) => {
   try {
     const nurse = await Nurse.findByIdAndDelete(req.params.id);
     if (!nurse) {
@@ -65,5 +65,3 @@ const deleteNurse = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
-
-export { getNurses, getNurse, createNurse, updateNurse, deleteNurse };

@@ -42,4 +42,5 @@ const nurseSchema = new mongoose.Schema({
   }
 });
 
-export default mongoose.model('Nurse', nurseSchema);
+const Nurse = mongoose.model('Nurse', nurseSchema);
+export default Nurse;

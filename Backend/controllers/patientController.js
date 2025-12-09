@@ -1,7 +1,7 @@
 import Patient from '../models/Patient.js';
 
 // Get all patients
-const getPatients = async (req, res) => {
+export const getPatients = async (req, res) => {
   try {
     const patients = await Patient.find().populate('createdBy', 'name email');
     res.json(patients);
@@ -11,7 +11,7 @@ const getPatients = async (req, res) => {
 };
 
 // Get single patient
-const getPatient = async (req, res) => {
+export const getPatient = async (req, res) => {
   try {
     const patient = await Patient.findById(req.params.id);
     if (!patient) {
@@ -24,7 +24,7 @@ const getPatient = async (req, res) => {
 };
 
 // Create patient
-const createPatient = async (req, res) => {
+export const createPatient = async (req, res) => {
   try {
     const patient = await Patient.create({
       ...req.body,
@@ -37,7 +37,7 @@ const createPatient = async (req, res) => {
 };
 
 // Update patient
-const updatePatient = async (req, res) => {
+export const updatePatient = async (req, res) => {
   try {
     const patient = await Patient.findByIdAndUpdate(
       req.params.id,
@@ -54,7 +54,7 @@ const updatePatient = async (req, res) => {
 };
 
 // Delete patient
-const deletePatient = async (req, res) => {
+export const deletePatient = async (req, res) => {
   try {
     const patient = await Patient.findByIdAndDelete(req.params.id);
     if (!patient) {
@@ -65,5 +65,3 @@ const deletePatient = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
-
-export { getPatients, getPatient, createPatient, updatePatient, deletePatient };
