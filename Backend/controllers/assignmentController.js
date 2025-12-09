@@ -1,4 +1,4 @@
-const Assignment = require('../models/Assignment');
+import Assignment from '../models/Assignment.js';
 
 // Get all assignments
 const getAssignments = async (req, res) => {
@@ -59,4 +59,4 @@ const deleteAssignment = async (req, res) => {
   }
 };
 
-module.exports = { getAssignments, createAssignment, updateAssignment, deleteAssignment };
+export { getAssignments, createAssignment, updateAssignment, deleteAssignment };

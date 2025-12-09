@@ -1,4 +1,4 @@
-const Nurse = require('../models/Nurse');
+import Nurse from '../models/Nurse.js';
 
 // Get all nurses
 const getNurses = async (req, res) => {
@@ -66,4 +66,4 @@ const deleteNurse = async (req, res) => {
   }
 };
 
-module.exports = { getNurses, getNurse, createNurse, updateNurse, deleteNurse };
+export { getNurses, getNurse, createNurse, updateNurse, deleteNurse };

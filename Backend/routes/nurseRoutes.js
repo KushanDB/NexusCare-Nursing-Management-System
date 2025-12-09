@@ -1,7 +1,7 @@
-const express = require('express');
-const { getNurses, getNurse, createNurse, updateNurse, deleteNurse } = require('../controllers/nurseController');
-const { protect } = require('../middleware/authMiddleware');
-const { checkRole } = require('../middleware/roleMiddleware');
+import express from 'express';
+import { getNurses, getNurse, createNurse, updateNurse, deleteNurse } from '../controllers/nurseController.js';
+import { protect } from '../middleware/authMiddleware.js';
+import { checkRole } from '../middleware/roleMiddleware.js';
 const router = express.Router();
 
 router.get('/', protect, getNurses);
@@ -10,4 +10,4 @@ router.post('/', protect, checkRole('admin'), createNurse);
 router.put('/:id', protect, checkRole('admin'), updateNurse);
 router.delete('/:id', protect, checkRole('admin'), deleteNurse);
 
-module.exports = router;
+export default router;
