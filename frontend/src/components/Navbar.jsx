@@ -27,7 +27,7 @@ const Navbar = () => {
               <>
                 <Link
                   to="/dashboard"
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition flex items-center"
+                  className="text-gray-700 hover:text-[#015D67] px-3 py-2 rounded-md text-sm font-medium transition flex items-center"
                 >
                   <FiHome className="mr-2" />
                   Dashboard
@@ -50,13 +50,13 @@ const Navbar = () => {
               <>
                 <Link
                   to="/login"
-                  className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-gray-700 hover:text-[#015D67] px-3 py-2 rounded-md text-sm font-medium"
                 >
                   Login
                 </Link>
                 <Link
                   to="/register"
-                  className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition"
+                  className="bg-gradient-to-r from-[#015D67] to-[#00ACB1] text-white px-4 py-2 rounded-md text-sm font-medium hover:opacity-90 transition"
                 >
                   Register
                 </Link>

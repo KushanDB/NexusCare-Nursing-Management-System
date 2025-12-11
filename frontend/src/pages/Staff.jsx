@@ -51,7 +51,7 @@ const Staff = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-gradient-to-br from-[#CAF0C1]/20 to-[#87E4DB]/20">
       <Sidebar />
       
       <div className="flex-1 p-8">
@@ -65,7 +65,7 @@ const Staff = () => {
               setEditingStaff(null);
               setShowAddModal(true);
             }}
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition flex items-center font-medium shadow-lg"
+            className="bg-gradient-to-r from-[#015D67] to-[#00ACB1] text-white px-6 py-3 rounded-lg hover:opacity-90 transition flex items-center font-medium shadow-lg"
           >
             <FiPlus className="mr-2" />
             Add Staff Member
@@ -82,13 +82,13 @@ const Staff = () => {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search staff..."
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
               />
             </div>
             <select
               value={roleFilter}
               onChange={(e) => setRoleFilter(e.target.value)}
-              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
             >
               <option value="">All Roles</option>
               <option value="admin">Admin</option>
@@ -101,7 +101,7 @@ const Staff = () => {
         {/* Staff Grid */}
         {loading ? (
           <div className="flex items-center justify-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#00ACB1]"></div>
           </div>
         ) : staff.length === 0 ? (
           <div className="text-center py-12">

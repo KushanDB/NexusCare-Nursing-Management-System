@@ -44,14 +44,14 @@ const PatientDetails = () => {
       <div className="flex min-h-screen">
         <Sidebar />
         <div className="flex-1 flex items-center justify-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#00ACB1]"></div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-gradient-to-br from-[#CAF0C1]/20 to-[#87E4DB]/20">
       <Sidebar />
       
       <div className="flex-1 p-8">
@@ -75,7 +75,7 @@ const PatientDetails = () => {
             <div className="flex space-x-3">
               <Link
                 to={`/patients/edit/${patient._id}`}
-                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition flex items-center"
+                className="bg-gradient-to-r from-[#015D67] to-[#00ACB1] text-white px-4 py-2 rounded-lg hover:opacity-90 transition flex items-center"
               >
                 <FiEdit className="mr-2" />
                 Edit

@@ -33,13 +33,13 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-[#CAF0C1] via-white to-[#87E4DB]">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Modern Healthcare{' '}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-purple-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#015D67] to-[#00ACB1]">
               Management System
             </span>
           </h1>
@@ -52,7 +52,7 @@ const Home = () => {
             {user ? (
               <Link
                 to="/dashboard"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-blue-700 transition shadow-lg"
+                className="bg-gradient-to-r from-[#015D67] to-[#00ACB1] text-white px-8 py-3 rounded-lg text-lg font-medium hover:opacity-90 transition shadow-lg"
               >
                 Go to Dashboard
               </Link>
@@ -60,13 +60,13 @@ const Home = () => {
               <>
                 <Link
                   to="/register"
-                  className="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-blue-700 transition shadow-lg"
+                  className="bg-gradient-to-r from-[#015D67] to-[#00ACB1] text-white px-8 py-3 rounded-lg text-lg font-medium hover:opacity-90 transition shadow-lg"
                 >
                   Get Started
                 </Link>
                 <Link
                   to="/login"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg text-lg font-medium border-2 border-blue-600 hover:bg-blue-50 transition"
+                  className="bg-white text-[#015D67] px-8 py-3 rounded-lg text-lg font-medium border-2 border-[#015D67] hover:bg-[#CAF0C1] transition"
                 >
                   Sign In
                 </Link>
@@ -97,15 +97,15 @@ const Home = () => {
         <div className="mt-24 bg-white rounded-2xl shadow-xl p-12">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <p className="text-5xl font-bold text-blue-600 mb-2">1000+</p>
+              <p className="text-5xl font-bold text-[#015D67] mb-2">1000+</p>
               <p className="text-gray-600 font-medium">Patients Managed</p>
             </div>
             <div>
-              <p className="text-5xl font-bold text-green-600 mb-2">50+</p>
+              <p className="text-5xl font-bold text-[#00ACB1] mb-2">50+</p>
               <p className="text-gray-600 font-medium">Healthcare Professionals</p>
             </div>
             <div>
-              <p className="text-5xl font-bold text-purple-600 mb-2">5000+</p>
+              <p className="text-5xl font-bold text-[#87E4DB] mb-2">5000+</p>
               <p className="text-gray-600 font-medium">Appointments Scheduled</p>
             </div>
           </div>
@@ -122,7 +122,7 @@ const Home = () => {
           {!user && (
             <Link
               to="/register"
-              className="inline-block bg-linear-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-lg text-lg font-medium hover:shadow-2xl transition"
+              className="inline-block bg-gradient-to-r from-[#015D67] to-[#00ACB1] text-white px-10 py-4 rounded-lg text-lg font-medium hover:shadow-2xl transition"
             >
               Start Free Trial
             </Link>

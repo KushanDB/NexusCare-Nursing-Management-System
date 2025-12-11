@@ -51,7 +51,7 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 to-purple-50 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-[#CAF0C1] to-[#87E4DB] py-12 px-4">
       <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-2xl p-8">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-gray-900">Create Account</h2>
@@ -70,7 +70,7 @@ const Register = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
                   placeholder="Dr. John Smith"
                 />
               </div>
@@ -86,7 +86,7 @@ const Register = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
                   placeholder="john@hospital.com"
                 />
               </div>
@@ -103,7 +103,7 @@ const Register = () => {
                   onChange={handleChange}
                   required
                   minLength={6}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
                   placeholder="••••••••"
                 />
               </div>
@@ -121,7 +121,7 @@ const Register = () => {
                   value={formData.confirmPassword}
                   onChange={handleChange}
                   required
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
                   placeholder="••••••••"
                 />
               </div>
@@ -134,7 +134,7 @@ const Register = () => {
                 value={formData.role}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
               >
                 <option value="nurse">Nurse</option>
                 <option value="doctor">Doctor</option>
@@ -151,7 +151,7 @@ const Register = () => {
                   name="department"
                   value={formData.department}
                   onChange={handleChange}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
                   placeholder="Cardiology"
                 />
               </div>
@@ -166,7 +166,7 @@ const Register = () => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
                   placeholder="1234567890"
                 />
               </div>
@@ -181,7 +181,7 @@ const Register = () => {
                 name="specialization"
                 value={formData.specialization}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
                 placeholder="e.g., Pediatrics"
               />
             </div>
@@ -190,7 +190,7 @@ const Register = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition disabled:bg-gray-400 font-medium"
+            className="w-full bg-gradient-to-r from-[#015D67] to-[#00ACB1] text-white py-3 rounded-lg hover:opacity-90 transition disabled:bg-gray-400 font-medium"
           >
             {loading ? 'Creating Account...' : 'Create Account'}
           </button>
@@ -198,7 +198,7 @@ const Register = () => {
 
         <p className="text-center text-gray-600 mt-6">
           Already have an account?{' '}
-          <Link to="/login" className="text-blue-600 hover:underline font-medium">
+          <Link to="/login" className="text-[#015D67] hover:underline font-medium">
             Sign In
           </Link>
         </p>

@@ -34,7 +34,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-50 to-purple-50 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-br from-[#CAF0C1] to-[#87E4DB] flex items-center justify-center px-4">
       <div className="max-w-md w-full bg-white rounded-xl shadow-2xl p-8">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-gray-900">Welcome Back</h2>
@@ -52,7 +52,7 @@ const Login = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
                 placeholder="doctor@hospital.com"
               />
             </div>
@@ -68,7 +68,7 @@ const Login = () => {
                 value={formData.password}
                 onChange={handleChange}
                 required
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
                 placeholder="••••••••"
               />
             </div>
@@ -77,7 +77,7 @@ const Login = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition disabled:bg-gray-400 font-medium"
+            className="w-full bg-gradient-to-r from-[#015D67] to-[#00ACB1] text-white py-3 rounded-lg hover:opacity-90 transition disabled:bg-gray-400 font-medium"
           >
             {loading ? 'Signing In...' : 'Sign In'}
           </button>
@@ -85,7 +85,7 @@ const Login = () => {
 
         <p className="text-center text-gray-600 mt-6">
           Don't have an account?{' '}
-          <Link to="/register" className="text-blue-600 hover:underline font-medium">
+          <Link to="/register" className="text-[#015D67] hover:underline font-medium">
             Register Here
           </Link>
         </p>

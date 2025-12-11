@@ -43,7 +43,7 @@ const Appointments = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-gradient-to-br from-[#CAF0C1]/20 to-[#87E4DB]/20">
       <Sidebar />
       
       <div className="flex-1 p-8">
@@ -54,7 +54,7 @@ const Appointments = () => {
           </div>
           <Link
             to="/appointments/add"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition flex items-center font-medium shadow-lg"
+            className="bg-gradient-to-r from-[#015D67] to-[#00ACB1] text-white px-6 py-3 rounded-lg hover:opacity-90 transition flex items-center font-medium shadow-lg"
           >
             <FiPlus className="mr-2" />
             Schedule Appointment
@@ -69,7 +69,7 @@ const Appointments = () => {
               <select
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value)}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
               >
                 <option value="">All Status</option>
                 <option value="Scheduled">Scheduled</option>
@@ -87,7 +87,7 @@ const Appointments = () => {
                   type="date"
                   value={dateFilter}
                   onChange={(e) => setDateFilter(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
                 />
               </div>
             </div>
@@ -109,14 +109,14 @@ const Appointments = () => {
         {/* Appointments Grid */}
         {loading ? (
           <div className="flex items-center justify-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#00ACB1]"></div>
           </div>
         ) : appointments.length === 0 ? (
           <div className="text-center py-12">
             <p className="text-gray-600 mb-4">No appointments found</p>
             <Link
               to="/appointments/add"
-              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition"
+              className="inline-block bg-gradient-to-r from-[#015D67] to-[#00ACB1] text-white px-6 py-3 rounded-lg hover:opacity-90 transition"
             >
               Schedule First Appointment
             </Link>

@@ -70,7 +70,7 @@ const Profile = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-gradient-to-br from-[#CAF0C1]/20 to-[#87E4DB]/20">
       <Sidebar />
       
       <div className="flex-1 p-8">
@@ -177,7 +177,7 @@ const Profile = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition disabled:bg-gray-400 font-medium"
+                className="w-full bg-gradient-to-r from-[#015D67] to-[#00ACB1] text-white py-3 rounded-lg hover:opacity-90 transition disabled:bg-gray-400 font-medium"
               >
                 {loading ? 'Updating...' : 'Update Profile'}
               </button>

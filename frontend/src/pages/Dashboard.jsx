@@ -60,14 +60,14 @@ const Dashboard = () => {
       <div className="flex min-h-screen">
         <Sidebar />
         <div className="flex-1 flex items-center justify-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#00ACB1]"></div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-gradient-to-br from-[#CAF0C1]/20 to-[#87E4DB]/20">
       <Sidebar />
       
       <div className="flex-1 p-8">
@@ -137,7 +137,7 @@ const Dashboard = () => {
             <h2 className="text-2xl font-bold text-gray-900">Today's Appointments</h2>
             <Link
               to="/appointments"
-              className="text-blue-600 hover:text-blue-700 font-medium"
+              className="text-[#015D67] hover:text-[#00ACB1] font-medium"
             >
               View All
             </Link>
@@ -159,7 +159,7 @@ const Dashboard = () => {
                       </h3>
                       <p className="text-sm text-gray-600">{appointment.patient.patientId}</p>
                     </div>
-                    <span className="text-sm font-medium text-blue-600">
+                    <span className="text-sm font-medium text-[#015D67]">
                       {appointment.appointmentTime}
                     </span>
                   </div>
@@ -184,14 +184,14 @@ const Dashboard = () => {
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           <Link
             to="/patients/add"
-            className="bg-blue-600 text-white rounded-lg p-6 hover:bg-blue-700 transition shadow-lg text-center"
+            className="bg-gradient-to-r from-[#015D67] to-[#00ACB1] text-white rounded-lg p-6 hover:opacity-90 transition shadow-lg text-center"
           >
             <FiUsers className="text-4xl mx-auto mb-3" />
             <h3 className="text-lg font-semibold">Add New Patient</h3>
           </Link>
           <Link
             to="/appointments/add"
-            className="bg-green-600 text-white rounded-lg p-6 hover:bg-green-700 transition shadow-lg text-center"
+            className="bg-gradient-to-r from-[#00ACB1] to-[#87E4DB] text-white rounded-lg p-6 hover:opacity-90 transition shadow-lg text-center"
           >
             <FiCalendar className="text-4xl mx-auto mb-3" />
             <h3 className="text-lg font-semibold">Schedule Appointment</h3>
@@ -199,7 +199,7 @@ const Dashboard = () => {
           {user.role === 'admin' && (
             <Link
               to="/staff"
-              className="bg-purple-600 text-white rounded-lg p-6 hover:bg-purple-700 transition shadow-lg text-center"
+              className="bg-gradient-to-r from-[#87E4DB] to-[#CAF0C1] text-gray-800 rounded-lg p-6 hover:opacity-90 transition shadow-lg text-center"
             >
               <FiUserCheck className="text-4xl mx-auto mb-3" />
               <h3 className="text-lg font-semibold">Manage Staff</h3>

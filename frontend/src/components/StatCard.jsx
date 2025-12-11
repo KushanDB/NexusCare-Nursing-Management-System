@@ -1,10 +1,10 @@
 const StatCard = ({ title, value, icon: Icon, color = 'blue' }) => {
   const colorClasses = {
-    blue: 'bg-blue-100 text-blue-600',
-    green: 'bg-green-100 text-green-600',
-    yellow: 'bg-yellow-100 text-yellow-600',
+    blue: 'bg-[#015D67]/10 text-[#015D67]',
+    green: 'bg-[#00ACB1]/10 text-[#00ACB1]',
+    yellow: 'bg-[#CAF0C1]/50 text-[#015D67]',
     red: 'bg-red-100 text-red-600',
-    purple: 'bg-purple-100 text-purple-600',
+    purple: 'bg-[#87E4DB]/20 text-[#015D67]',
   };
 
   return (

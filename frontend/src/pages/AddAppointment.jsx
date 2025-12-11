@@ -57,8 +57,7 @@ const AddAppointment = () => {
     };
 
     return (
-        <div className="flex min-h-screen bg-gray-50">
-            <Sidebar />
+    <div className="flex min-h-screen bg-gradient-to-br from-[#CAF0C1]/20 to-[#87E4DB]/20">
 
             <div className="flex-1 p-8">
                 <div className="max-w-3xl mx-auto">
@@ -78,7 +77,7 @@ const AddAppointment = () => {
                                     value={formData.patient}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
                                 >
                                     <option value="">Select Patient</option>
                                     {patients.map((patient) => (
@@ -96,7 +95,7 @@ const AddAppointment = () => {
                                     value={formData.doctor}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
                                 >
                                     <option value="">Select Doctor</option>
                                     {doctors.map((doctor) => (
@@ -116,7 +115,7 @@ const AddAppointment = () => {
                                     onChange={handleChange}
                                     required
                                     min={new Date().toISOString().split('T')[0]}
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
                                 />
                             </div>
 
@@ -128,7 +127,7 @@ const AddAppointment = () => {
                                     value={formData.appointmentTime}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
                                 />
                             </div>
                             <div>
@@ -142,7 +141,7 @@ const AddAppointment = () => {
                                     onChange={handleChange}
                                     min="15"
                                     step="15"
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
                                 />
                             </div>
 
@@ -153,7 +152,7 @@ const AddAppointment = () => {
                                     value={formData.type}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
                                 >
                                     <option value="Checkup">Checkup</option>
                                     <option value="Follow-up">Follow-up</option>
@@ -172,7 +171,7 @@ const AddAppointment = () => {
                                 onChange={handleChange}
                                 required
                                 rows={3}
-                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
                                 placeholder="Describe the reason for appointment..."
                             />
                         </div>
@@ -184,7 +183,7 @@ const AddAppointment = () => {
                                 value={formData.notes}
                                 onChange={handleChange}
                                 rows={3}
-                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00ACB1] focus:border-transparent"
                                 placeholder="Additional notes..."
                             />
                         </div>
@@ -193,7 +192,7 @@ const AddAppointment = () => {
                             <button
                                 type="submit"
                                 disabled={loading}
-                                className="flex-1 bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition disabled:bg-gray-400 font-medium"
+                                className="flex-1 bg-gradient-to-r from-[#015D67] to-[#00ACB1] text-white py-3 rounded-lg hover:opacity-90 transition disabled:bg-gray-400 font-medium"
                             >
                                 {loading ? 'Scheduling...' : 'Schedule Appointment'}
                             </button>

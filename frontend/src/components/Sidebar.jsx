@@ -33,8 +33,8 @@ const Sidebar = () => {
             to={item.path}
             className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition ${
               isActive(item.path)
-                ? 'bg-blue-600 text-white'
-                : 'text-gray-700 hover:bg-gray-100'
+                ? 'bg-gradient-to-r from-[#015D67] to-[#00ACB1] text-white'
+                : 'text-gray-700 hover:bg-[#87E4DB]/20'
             }`}
           >
             <item.icon className="text-xl" />
