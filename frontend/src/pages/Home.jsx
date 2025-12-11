@@ -33,13 +33,13 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-linear-to-br from-blue-50 via-white to-purple-50">
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Modern Healthcare{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-purple-600">
               Management System
             </span>
           </h1>
@@ -122,7 +122,7 @@ const Home = () => {
           {!user && (
             <Link
               to="/register"
-              className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-lg text-lg font-medium hover:shadow-2xl transition"
+              className="inline-block bg-linear-to-r from-blue-600 to-purple-600 text-white px-10 py-4 rounded-lg text-lg font-medium hover:shadow-2xl transition"
             >
               Start Free Trial
             </Link>
