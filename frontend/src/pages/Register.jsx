@@ -51,7 +51,7 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 py-12 px-4">
+    <div className="min-h-screen bg-linear-to-br from-blue-50 to-purple-50 py-12 px-4">
       <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-2xl p-8">
         <div className="text-center mb-8">
           <h2 className="text-3xl font-bold text-gray-900">Create Account</h2>
